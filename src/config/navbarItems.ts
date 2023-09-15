@@ -4,10 +4,6 @@ const navbarItems = [
     "href": "/"
   },
   {
-    "title": "Projetos",
-    "href": "/projects"
-  },
-  {
     "title": "Contato",
     "href": "/contact"
   }

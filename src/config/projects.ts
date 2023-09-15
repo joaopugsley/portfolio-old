@@ -4,7 +4,8 @@ const projects = [
     title: "TwitchRoulette",
     images: [
       "twitchroulette/1.png",
-      "twitchroulette/2.png"
+      "twitchroulette/2.png",
+      "twitchroulette/3.png"
     ],
     description: "Realização de sorteios na twitch.tv de maneira fácil, prática & eficaz sem a necessidade de qualquer tipo de login ou autenticação.",
     url: "https://twitchroulette.live",

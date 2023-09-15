@@ -22,7 +22,7 @@ const ProjectItem = ({ type, title, images, description, url, stack }: ProjectIt
         <span className="font-thin text-sm/3 text-violet-100">{type}</span>
         <h4 className="font-extrabold text-xl">{title}</h4>
         <span className="font-extralight text-sm text-gray-100">{description}</span>
-        <div className="relative flex flex-row items-center mt-3">
+        <div className="relative flex flex-row mt-3">
           <Dropdown label={"Tecnologias Utilizadas"}>
             <div className="flex flex-col space-y-1 mt-2">
               {
@@ -32,7 +32,7 @@ const ProjectItem = ({ type, title, images, description, url, stack }: ProjectIt
               }
             </div>
           </Dropdown>
-          <a href={url} target="_blank" className="absolute top-0 ml-2 p-2 bg-gradient-to-r from-violet-500 to-blue-700 rounded-md flex justify-center items-center transition-all duration-75 hover:scale-110">
+          <a href={url} target="_blank" className="ml-2 w-8 h-8 bg-gradient-to-r from-violet-500 to-blue-700 rounded-md flex justify-center items-center transition-all duration-75 hover:scale-110">
             <BsBoxArrowUpRight/>
           </a>
         </div>

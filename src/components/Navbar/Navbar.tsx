@@ -34,7 +34,7 @@ const Navbar = (): JSX.Element => {
             <h3 className="font-extrabold text-2xl bg-gradient-to-r from-violet-500 to-blue-700 bg-clip-text hover:text-transparent transition-all duration-200">João Pugsley</h3>
           </Link>
         </div>
-        <div className="hidden md:absolute md:right-12 md:flex flex-row justify-center items-center">
+        <div className="hidden md:right-12 md:flex flex-row justify-center items-center">
           {
             navbarItems.map((item) => (
               <NavItem key={item.href} href={item.href} title={item.title} className="px-2 text-lg"/>

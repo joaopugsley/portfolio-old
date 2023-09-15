@@ -1,9 +1,18 @@
 "use client"
 
+import { scroller } from "react-scroll";
 import socialMedia from "@/config/socialMedia";
 import Button from "../Button/Button";
 
 const Landing = (): JSX.Element => {
+
+  const scrollTo = (section: string) => {
+    scroller.scrollTo(section, {
+      duration: 500,
+      smooth: "easeInOutQuart",
+      offset: -100
+    })
+  }
 
   return (
     <section className="relative w-full min-h-[calc(100vh-80px)] flex flex-col md:flex-row justify-center items-center">
@@ -11,9 +20,9 @@ const Landing = (): JSX.Element => {
         <h1 className="text-center font-extrabold text-4xl md:text-6xl bg-clip-text bg-gradient-to-br from-violet-500 to-blue-700 text-transparent p-1">João Pugsley</h1>
         <h2 className="text-center font-light text-xl">Desenvolvedor Web</h2>
         <h2 className="text-center font-light text-xl">Full-Stack</h2>
-        <div className="flex flex-col md:flex-row justify-center items-center">
-          <Button onClick={() => {window.open("https://drive.google.com/u/1/uc?id=1KJZlceI8UwTz2jJrBAd9u85UImsBnnE9&export=download", "_blank")}} className="mt-3 md:mx-2 w-44">Baixar Currículo</Button>
-          <Button className="mt-3 md:mx-2 w-44">Projetos</Button>
+        <div className="flex flex-row justify-center items-center space-x-4">
+          <Button onClick={() => {window.open("https://drive.google.com/u/1/uc?id=1KJZlceI8UwTz2jJrBAd9u85UImsBnnE9&export=download", "_blank")}} className="mt-3">Currículo</Button>
+          <Button onClick={() => {scrollTo("projects")}} className="mt-3">Projetos</Button>
         </div>
         <div className="mt-3 flex flex-row justify-center items-center space-x-2">
           {

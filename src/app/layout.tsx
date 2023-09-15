@@ -15,7 +15,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br" className="no-scrollbar">
-      <body className={worksans.className}>{children}</body>
+      <body className={worksans.className}>
+        {children}
+      </body>
     </html>
   )
 }
