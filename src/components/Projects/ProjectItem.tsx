@@ -16,7 +16,7 @@ export type ProjectItemProps = {
 const ProjectItem = ({ type, title, images, description, url, stack }: ProjectItemProps): JSX.Element => {
   const formattedImages = images.map(image => `/images/projects/${image}`);
   return (
-    <div className="w-4/5 p-2 pb-4 rounded-lg bg-gradient-to-bl from-violet-500 to-blue-500 drop-shadow-sm flex flex-col space-y-2">
+    <div className="w-full p-2 pb-4 rounded-lg bg-gradient-to-bl from-violet-500 to-blue-500 drop-shadow-sm flex flex-col space-y-2">
       <Carousel images={formattedImages} rounded={true} className="w-full"/>
       <div className="p-2 flex flex-col">
         <span className="font-thin text-sm/3 text-violet-100">{type}</span>

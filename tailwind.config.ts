@@ -12,7 +12,11 @@ const config: Config = {
         "default": "#232946"
       },
       dropShadow: {
-        "2xl-s": "0 25px 35px rgb(0 0 0 / 0.15)"
+        "2xl-s": "0 25px 35px rgb(0 0 0 / 0.15)",
+        "glow": [
+          "0 0px 20px rgba(255,255, 255, 0.35)",
+          "0 0px 65px rgba(255, 255,255, 0.2)"
+        ]
       },
       borderWidth: {
         "1": "1px"
