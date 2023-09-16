@@ -13,10 +13,7 @@
 - Joe utiliza a ``API`` da <a href="https://platform.openai.com/overview">OpenAI</a>, mais especificamente ``GPT-3.5-turbo``.
 - Você pode conferir o ``prompt``do Joe 🦝 clicando <a href="https://github.com/joaopugsley/portfolio/blob/main/src/helpers/constants/chatPrompt.ts">aqui</a>.
 
-<div style="width: 100%; display: flex; justify-content: center;">
-    <img src="https://media.discordapp.net/attachments/1132549314330239037/1152672957332729876/image.png" style="height: 450px; width: auto;"/>
-</div>
-
+<img src="https://media.discordapp.net/attachments/1132549314330239037/1152672957332729876/image.png" style="height: 450px; width: auto;"/>
 
 ## License: 📃
 - This portfolio is available under the ``MIT License``. See the <a href="https://github.com/joaopugsley/portfolio/blob/main/LICENSE">LICENSE</a> file for more info.
