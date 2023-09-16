@@ -28,7 +28,7 @@ const Navbar = (): JSX.Element => {
 
   return (
     <>
-      <nav className={`fixed top-0 w-full px-8 h-[80px] z-[1000] flex justify-center items-center align-middle text-center bg-default border-violet-400 ${!!scrolled && "border-b-1"}`}>
+      <nav className={`fixed top-0 w-full px-8 h-[80px] z-[1000] flex justify-center items-center align-middle text-center bg-default border-violet-400 ${!!scrolled && "border-b"}`}>
         <div className="absolute left-8 md:left-12 transition-all ease-out duration-500 hover:scale-110">
           <Link href="/">
             <h3 className="font-extrabold text-2xl bg-gradient-to-r from-violet-500 to-blue-700 bg-clip-text hover:text-transparent transition-all duration-200">João Pugsley</h3>

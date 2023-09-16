@@ -16,7 +16,7 @@ const Contact = (): JSX.Element => {
   const closeChat = () => setChatOpen(false);
 
   return (
-    <section className="relative w-full min-h-screen h-auto flex flex-col justify-center items-center space-y-2">
+    <section className="relative w-full min-h-screen h-auto flex flex-col justify-center items-center space-y-2" id="contact">
       <h3 className="font-extrabold text-lg lg:text-5xl">Impressionado<a className="bg-clip-text bg-gradient-to-br from-violet-500 to-blue-700 text-transparent opacity-50">(a)</a>? Entre em contato!</h3>
       <span className="bg-clip-text bg-gradient-to-br from-violet-500 to-blue-700 text-transparent">Se conecte comigo:</span>
       <div className="flex flex-row justify-center items-center space-x-2">
