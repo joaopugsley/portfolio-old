@@ -21,7 +21,7 @@ const Landing = (): JSX.Element => {
         <h2 className="text-center font-light text-xl">Desenvolvedor Web</h2>
         <h2 className="text-center font-light text-xl">Full-Stack</h2>
         <div className="flex flex-row justify-center items-center space-x-4">
-          <Button onClick={() => {window.open("https://drive.google.com/u/1/uc?id=1KJZlceI8UwTz2jJrBAd9u85UImsBnnE9&export=download", "_blank")}} className="mt-3">Currículo</Button>
+          <Button onClick={() => {window.open("https://drive.google.com/u/1/uc?id=1dNDgx3mgWiSk9Uji1uq4XfUx5FrquV1F&export=download", "_blank")}} className="mt-3">Currículo</Button>
           <Button onClick={() => {scrollTo("projects")}} className="mt-3">Projetos</Button>
         </div>
         <div className="mt-3 flex flex-row justify-center items-center space-x-2">
