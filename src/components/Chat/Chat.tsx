@@ -65,11 +65,19 @@ const Chat = ({ close }: ChatProps): JSX.Element => {
     })
     .then(res => res.json())
     .then(data => {
-      if(data.error) return;
+      if(data.error) {
+        pushMessage("Não sei se posso responder isso 😅🦝", "assistant");
+        setThinking(false);
+        return;
+      }
       pushMessage(data.message, "assistant");
       setThinking(false);
     })
-    .catch(err => console.error(err));
+    .catch(err => {
+      console.error(err);
+      pushMessage("Não sei se posso responder isso 😅🦝", "assistant");
+      setThinking(false);
+    });
   }
 
   useEffect(() => {
@@ -80,7 +88,7 @@ const Chat = ({ close }: ChatProps): JSX.Element => {
 
   return (
     <section className="fixed z-[2000] top-[-10px] left-0 w-full h-[calc(100%+10px)] bg-black bg-opacity-60 flex justify-center items-center">
-      <div className="bg-default rounded-lg w-4/5 h-3/5 md:w-1/3 drop-shadow-xl flex justify-center items-center">
+      <div className="bg-default rounded-lg w-4/5 min-h-[60%] md:w-1/3 drop-shadow-xl flex justify-center items-center">
         <div onClick={() => {close()}} className="absolute right-6 top-4 hover:scale-110 z-[2500]">
           <IoIosExit className="w-8 h-8"/>
         </div>
@@ -101,7 +109,7 @@ const Chat = ({ close }: ChatProps): JSX.Element => {
             <div className="absolute bottom-5 w-4/5 lg:w-3/5 h-[90%] mt-3 flex flex-col justify-center items-center">
               <h2 className="text-xl xl:text-3xl font-extrabold">Fale com Joe! 🦝</h2>
               <div className="w-full mt-1 mb-2 h-5/6 max-h-[83.33%] bg-black bg-opacity-10 rounded-lg p-3">
-                <div className="relative w-full h-full flex flex-col overflow-y-scroll no-scrollbar space-y-2">
+                <div className="relative w-full h-full flex flex-col overflow-y-scroll overflow-x-hidden no-scrollbar space-y-2">
                   {
                     messageHistory.map((message, i) => (
                       <ChatMessage key={`message-${i}`} content={message.content} isUserMessage={message.role == "user"}/>
@@ -112,6 +120,12 @@ const Chat = ({ close }: ChatProps): JSX.Element => {
               </div>
               <div className="relative w-full h-1/6 flex flex-row justify-center items-center">
                 <textarea 
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' && !e.shiftKey) {
+                      e.preventDefault()
+                      sendMessage()
+                    }
+                  }}
                   onChange={(e) => setInputText(e.target.value)} 
                   value={inputText} disabled={thinking} 
                   rows={1} maxLength={200} 
