@@ -1,8 +1,10 @@
 import { z } from "zod";
 
+export const roles = ["assistant", "user"] as const;
+
 export const MessageSchema = z.object({
   content: z.string().nonempty().max(300),
-  isUserMessage: z.boolean()
+  role: z.enum(roles)
 });
 
 export const MessageArraySchema = z.array(MessageSchema);

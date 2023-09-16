@@ -24,7 +24,7 @@ export async function POST(req: Request) {
         content: chatPrompt
       },
       ...parsedMessages.map((message) => ({
-        role: message.isUserMessage ? 'user' : 'assistant',
+        role: message.role,
         content: message.content
       }))
     ]
@@ -73,7 +73,7 @@ export async function POST(req: Request) {
 
   } catch(err) {
     return NextResponse.json({
-      error: "Bad request."
+      error: "Bad request"
     }, { status: 400 })
   }
 

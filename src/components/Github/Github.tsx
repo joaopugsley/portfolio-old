@@ -46,7 +46,7 @@ const Github = (): JSX.Element => {
           <p className="flex flex-row items-center"><AiOutlineEye className="w-auto h-6 mr-1"/>{repoData?.watching || 0} watching</p>
         </div>
         <a href="https://www.github.com/joaopugsley/portfolio" target="_blank" className="mt-3">
-          <Button className="drop-shadow-2xl border-1 border-white">
+          <Button className="drop-shadow-2xl border border-white">
             <span>Ver Repositório</span>
           </Button>
         </a>
