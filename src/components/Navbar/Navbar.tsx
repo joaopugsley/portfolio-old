@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react";
-import navbarItems from "@/config/navbarItems";
+import navbarItems from "@/helpers/constants/navbarItems";
 import NavItem from "./NavItem";
 import Link from "next/link";
 import { HiMenu } from "react-icons/hi";

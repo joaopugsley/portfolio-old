@@ -1,6 +1,6 @@
 "use client"
 
-import skills from "@/config/skills";
+import skills from "@/helpers/constants/skills";
 
 const Skills = (): JSX.Element => {
 

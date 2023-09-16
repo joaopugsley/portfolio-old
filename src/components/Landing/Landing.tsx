@@ -1,7 +1,7 @@
 "use client"
 
 import { scroller } from "react-scroll";
-import socialMedia from "@/config/socialMedia";
+import socialMedia from "@/helpers/constants/socialMedia";
 import Button from "../Button/Button";
 
 const Landing = (): JSX.Element => {

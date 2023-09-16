@@ -1,6 +1,6 @@
 "use client"
 
-import projects from "@/config/projects";
+import projects from "@/helpers/constants/projects";
 import ProjectItem from "./ProjectItem";
 
 const Projects = (): JSX.Element => {
